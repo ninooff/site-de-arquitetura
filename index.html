@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arquitecture</title>
+  <title>JP imóveis</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,11 +33,11 @@
     <div></div>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about-us">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about-us">Sobre</a></li>
+        <li><a href="#team">Equipe</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
   </div>
@@ -45,7 +45,7 @@
 
   <!-- inicio menu mobile                                   -->
   <div class="container">
-    <a href="#" class="logo"><img src="images/logo.svg" alt="logo image"></a>
+    <a class="logo"><img src="images/logo.svg" alt="logo image"></a>
     <div class="hamburger-menu">
       <div class="line line-1"></div>
       <div class="line line-2"></div>
@@ -54,33 +54,33 @@
           <span>Close</span>
           -->
     </div>
-    <header class="header">
+    <header id="home" class="header">
       <div class="img-wrapper">
-        <img src="images/bg.jpg" />
+        <img src="images/home3.jpg" />
       </div>
       <div class="banner">
-        <h1>Architecture & Interior Design</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button>Discover now</button>
+        <h1>JP imóveis</h1>
+        <p>Transformando sonhos em realidades.</p>
+        <a href="#about-us"><button>Descubra</button></a>
       </div>
     </header>
 
     <section class="sidebar">
       <ul class="menu">
         <li class="menu-item">
-          <a href="#" class="menu-link" data-content="Home">Home</a>
+          <a href="#home" class="menu-link" data-content="Início">Início</a>
         </li>
         <li class="menu-item">
-          <a href="#about-us" class="menu-link" data-content="About Us">About</a>
+          <a href="#about-us" class="menu-link" data-content="Sobre">Sobre</a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link" data-content="Team">Team</a>
+          <a href="#team" class="menu-link" data-content="Equipe">Equipe</a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link" data-content="Pricing">Pricing</a>
+          <a href="#services" class="menu-link" data-content="Serviços">Serviços</a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link" data-content="Contact">Contact</a>
+          <a href="#contact" class="menu-link" data-content="Contato">Contato</a>
         </li>
       </ul>
       <div class="social-media">
@@ -169,7 +169,43 @@
       </div>
     </section>
 
-    <section class="team">
+    <section id="testimonials" class="testimonials">
+      <div class="section-header">
+        <h1 class="section-heading">Depoimentos</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="content">
+        <div class="box">
+          <div class="imgBox">
+            <img src="./images/cliente4.jpg" alt="">
+          </div>
+          <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odit officia perferendis blanditiis sequi, officiis dolorum numquam id fugit recusandae sunt? Ipsam illo eos, accusamus non quasi sequi odio inventore!</p>
+            <h3>Cliente 1</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBox">
+            <img src="./images/cliente6.jpg" alt="">
+          </div>
+          <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odit officia perferendis blanditiis sequi, officiis dolorum numquam id fugit recusandae sunt? Ipsam illo eos, accusamus non quasi sequi odio inventore!</p>
+            <h3>Cliente 2</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBox">
+            <img src="./images/cliente7.jpg" alt="">
+          </div>
+          <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odit officia perferendis blanditiis sequi, officiis dolorum numquam id fugit recusandae sunt? Ipsam illo eos, accusamus non quasi sequi odio inventore!</p>
+            <h3>Cliente 3</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="team">
       <div class="section-header">
         <h1 class="section-heading">Our Team</h1>
         <div class="underline"></div>
@@ -211,7 +247,7 @@
       </div>
     </section>
     
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="contact-wrapper">
         <div class="contact-left"></div>
         <div class="contact-right">

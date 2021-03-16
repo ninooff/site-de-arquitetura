@@ -5,6 +5,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 html{
@@ -160,9 +161,6 @@ html{
   }
 }
 
- /* .display .container, body .fixed-top{
-  display: none;
-  }*/
   .display .container {
     display: block;
 
@@ -191,7 +189,7 @@ html{
   .fixed-top{
     position: fixed;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr ;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -299,6 +297,8 @@ html{
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
   }
+
+ 
   
   @keyframes moveBanner {
     0% {
@@ -420,12 +420,79 @@ html{
     opacity: .8;
   }
  
+.testimonials{
+    width: 100%;
+   /* padding-bottom: 15rem;*/
+    padding: 0 5rem 20rem 5rem;
+}
+
+.testimonials .content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /*margin-top: 40px;*/
+ /* margin-top: 1rem;*/
+}
+
+.testimonials .content .box{
+  /*width: 340px;*/
+  width: 37rem;
+  /*margin: 20px;*/
+  margin: 3rem;
+  padding: 40px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  background-color:#f5f5f5f5;
+  border-radius: 5%;
+}
+
+.testimonials .content .box .imgBox{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials .content .box .imgBox img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials .content .box .text{
+  text-align: center;
+}
+
+.testimonials .content .box .text p{
+    font-family: 'Josefin Slab',serif;
+    font-size: 1.6rem;
+}
+
+.testimonials .content .box .text h3{
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.6rem;
+  line-height:2.6rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+
+/* =========================== Team Part =================================*/
   .team{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 5rem 20rem 5rem;
+    background-color:#f5f5f5f5;
   }
 
   .cards-wrapper{
@@ -518,6 +585,16 @@ html{
     box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.4);
   }
 
+
+
+
+
+
+
+
+
+
+/* =========================== Contact part =================================*/
   .contact{
     width: 100%;
     height: 100vh;
@@ -683,6 +760,17 @@ html{
     border-radius: 0.3rem;
   }
 
+
+
+
+
+
+
+
+
+
+
+
 /* =========================== Responsive Part =================================*/
 
   @media(max-width: 1500px){
@@ -843,202 +931,141 @@ html{
     }
 
   }
-/* arrumar */
-@media (max-width:768px){
-  *{
-    transition:all .2s linear;
-  }
-  html{
-    font-size: 50%;
-}
-.container .logo{
-  top: 5rem;
-  left: 5rem;
-  padding:0;
-}
-
-.banner {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-}
-.banner h1 {
-  font-size: 5rem;
-  width: 60%;
-}
-/*arrumar depois*/
-  /*.about-us-img-wrapper{
-    display: none;
-  }*/
-    .fixed-top{
-        display: none;
-    }
-     .hamburger-menu{
-      display: block;
-    }
-
-  .hamburger-menu {
-      width: 3rem;
-      height: 3rem;
-      position: fixed;
-      top: 5rem;
-      right: 5rem;
-      z-index: 200;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      cursor: pointer;
-      transition: right 0.7s;
-    }
-    
-    .change .hamburger-menu {
-      right: 15rem;
-    }
-    
-    .line {
-      width: 100%;
-      height: 0.2rem;
-      background-color: #fff;
-      box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
-    }
-    
-    .change .line {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .change .line-1 {
-      transform: rotate(45deg) translate(0.3rem, 0.8rem);
-    }
-    
-    .change .line-2 {
-      opacity: 0;
-      visibility: hidden;
-    }
-    
-    .change .line-3 {
-      transform: rotate(-45deg) translate(0.3rem, -0.8rem);
-    }
-
-    /* ===========================hover over x(close)==========*/
-    /*.hamburger-menu span{
-      position:absolute;
-      left: 10rem;
-      width: 10rem;
-      height: 4rem;
-      background-color: #e2b646;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-family: 'Baloo Da 2',serif;
-      font-size: 1.6rem;
-      letter-spacing: 0.1rem;
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .hamburger-menu:hover span{
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .hamburger-menu span::before{
-      content: "";
-      position: absolute;
-      border-left: 1rem solid transparent;
-      border-right: 1rem solid #e2b646;
-      border-bottom: 1rem solid transparent;
-      border-top: 1rem solid transparent;
-      top: 50%;
-      left: -2rem;
-      transform: translateY(-50%);
-    }*/
-    /* ===========================hover over x(close)==========*/
-
-
-  .sidebar {
-      display:block;
-      width: 20rem;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      right: -40rem;
-      background-color: rgba(255, 255, 255, 0.664);
-      transition: right 0.5s;
-      z-index: 100;
-    }
-
-    
-    .change .sidebar {
-      right: 0;
-    }
-    
-    .menu {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    .menu-item {
-      text-align: center;
-    }
-    
-    .menu-link {
-      font-family: "Baloo Da 2", serif;
-      font-size: 3rem;
-      color: #555;
-      position: relative;
-    }
-    
-    .menu-link::before {
-      content: attr(data-content);
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: #c29525;
-      width: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      transition: width 0.3s ease-in-out;*/
-    }
-    
-    .menu-link:hover::before {
-      width: 100%;
-    }
-    
-    .social-media {
-      position: absolute;
-      bottom: 3rem;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    
-    .social-media i {
-      font-size: 2.2rem;
-      margin-right: 1rem;
-      /* mudei pra arrumar no cel (abaixo)*/
-      margin-bottom: 8rem;
-      width: 4.5rem;
-      height: 4.5rem;
-      background-color: #777;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      transition: background-color 0.3s;
-    }
-    
-    .social-media i:hover {
-      background-color: #c29525;
-    }
-  
-}
-  
 
   @media (max-width:700px){
+  .fixed-top{
+      display: none;
+  }
+  /*Sidebar menu                                                          */
+  .hamburger-menu{
+    display: block;
+  }
+  .hamburger-menu {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: right 0.7s;
+  }
+  
+  .change .hamburger-menu {
+    right: 15rem;
+  }
+  
+  .line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .change .line {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .change .line-1 {
+    transform: rotate(45deg) translate(0.3rem, 0.8rem);
+  }
+  
+  .change .line-2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .change .line-3 {
+    transform: rotate(-45deg) translate(0.3rem, -0.8rem);
+  }
+  .sidebar {
+    display:block;
+    width: 20rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -40rem;
+    background-color: rgba(255, 255, 255, 0.664);
+    transition: right 0.5s;
+    z-index: 100;
+  }
+
+  
+  .change .sidebar {
+    right: 0;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .menu-item {
+    text-align: center;
+  }
+  
+  .menu-link {
+    font-family: "Baloo Da 2", serif;
+    font-size: 2.5rem;
+    color: #555;
+    position: relative;
+  }
+  
+  .menu-link::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #c29525;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease-in-out;*/
+  }
+  
+  .menu-link:hover::before {
+    width: 100%;
+  }
+  
+  .social-media {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media i {
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    /* mudei pra arrumar no cel (abaixo)*/
+    margin-bottom: 8rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #777;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .social-media i:hover {
+    background-color: #c29525;
+  }
+
+    .container .logo{
+      top: 5rem;
+      left: 5rem;
+      padding:0;
+    }
+
     .banner h1{
       font-size: 4rem;
       line-height: 5rem;
@@ -1067,15 +1094,18 @@ html{
   }
 
     .sidebar{
-      width: 100%;
+      width: 50%;
       right: -100%;
   }
 
   .change .hamburger-menu{
-    right: 38rem;
+    right: 40%;
   }
 
-  .service{
+  .menu-link {
+    font-size: 3rem;
+  }
+    .service{
     width: 30rem;
   }
 
