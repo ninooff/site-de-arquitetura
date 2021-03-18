@@ -34,7 +34,7 @@
     <nav>
       <ul>
         <li><a href="#home">Início</a></li>
-        <li><a href="#about-us">Sobre</a></li>
+        <li><a href="#about">Sobre</a></li>
         <li><a href="#team">Equipe</a></li>
         <li><a href="#services">Serviços</a></li>
         <li><a href="#contact">Contato</a></li>
@@ -46,6 +46,7 @@
   <!-- inicio menu mobile                                   -->
   <div class="container">
     <a class="logo"><img src="images/logo.svg" alt="logo image"></a>
+    <a class="logo-mobile"><img src="images/logomobile.svg" alt="logo image"></a>
     <div class="hamburger-menu">
       <div class="line line-1"></div>
       <div class="line line-2"></div>
@@ -61,7 +62,7 @@
       <div class="banner">
         <h1>JP imóveis</h1>
         <p>Transformando sonhos em realidades.</p>
-        <a href="#about-us"><button>Descubra</button></a>
+        <a href="#about"><button>Descubra</button></a>
       </div>
     </header>
 
@@ -71,7 +72,7 @@
           <a href="#home" class="menu-link" data-content="Início">Início</a>
         </li>
         <li class="menu-item">
-          <a href="#about-us" class="menu-link" data-content="Sobre">Sobre</a>
+          <a href="#about" class="menu-link" data-content="Sobre">Sobre</a>
         </li>
         <li class="menu-item">
           <a href="#team" class="menu-link" data-content="Equipe">Equipe</a>
@@ -90,17 +91,34 @@
       </div>
     </section>
     <!-- fim menu mobile                                -->
-
-    <section id="about-us" class="about-us">
+    <section id="about" class="sobre">
       <div class="section-header">
-        <h1 class="section-heading">About Us</h1>
+        <h1 class="section-heading">Sobre nós</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="sobre-content">
+        <div class="inner-section">
+          <h3>Imobiliária de excelência da Zona Norte de Porto Alegre</h3>
+          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates earum officia blanditiis consectetur odit doloremque optio voluptas aliquam provident tempora recusandae delectus quo rerum aspernatur eaque, distinctio neque aliquid. Ipsum.</p>
+          <div class="social-list">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="serviços">
+      <div class="section-header">
+        <h1 class="section-heading">Serviços</h1>
         <div class="underline"></div>
       </div>
       <div class="services">
         <div class="service">
           <div class="service-header">
-            <i class="fas fa-pen-nib"></i>
-            <h3>Interior</h3>
+            <i class="fas fa-building"></i>
+            <h3>Venda de imóveis prontos e semi-prontos</h3>
           </div>
           <p class="service-text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -110,8 +128,8 @@
         </div>
         <div class="service">
           <div class="service-header">
-            <i class="fas fa-paint-roller"></i>
-            <h3>Exterior</h3>
+            <i><img src="./images/planta.png" alt=""></i>
+            <h3>Venda de imóveis na planta</h3>
           </div>
           <p class="service-text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -121,8 +139,8 @@
         </div>
         <div class="service">
           <div class="service-header">
-            <i class="fas fa-pencil-alt"></i>
-            <h3>Design</h3>
+            <i class="fas fa-sign"></i>
+            <h3>Venda de imóveis usados</h3>
           </div>
           <p class="service-text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -130,43 +148,9 @@
             voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!
           </p>
         </div>
-        <div class="service">
-          <div class="service-header">
-            <i class="fas fa-paint-brush"></i>
-            <h3>Decoration</h3>
-          </div>
-          <p class="service-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Doloremque, officia! Necessitatibus delectus sed dicta corrupti
-            voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!
-          </p>
+        <div class="building-img-wrapper">
+          <img src="images/building.png" />
         </div>
-        <div class="service">
-          <div class="service-header">
-            <i class="fas fa-ruler-combined"></i>
-            <h3>Planning</h3>
-          </div>
-          <p class="service-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Doloremque, officia! Necessitatibus delectus sed dicta corrupti
-            voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!
-          </p>
-        </div>
-        <div class="service">
-          <div class="service-header">
-            <i class="far fa-building"></i>
-            <h3>Execution</h3>
-          </div>
-          <p class="service-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Doloremque, officia! Necessitatibus delectus sed dicta corrupti
-            voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!
-          </p>
-        </div>
-        <div class="about-us-img-wrapper">
-          <img src="images/house.png" />
-        </div>
-      </div>
     </section>
 
     <section id="testimonials" class="testimonials">
@@ -251,25 +235,36 @@
       <div class="contact-wrapper">
         <div class="contact-left"></div>
         <div class="contact-right">
-          <h1 class="contact-heading">Contact</h1>
+          <h1 class="contact-heading">Contato</h1>
           <form>
             <div class="input-group">
               <input type="text" class="field">
-              <label class="input-label">Full Name</label>
+              <label class="input-label">Nome completo</label>
             </div>
             <div class="input-group">
               <input type="email" class="field">
-              <label class="input-label">Email</label>
+              <label class="input-label">E-mail</label>
             </div>
             <div class="input-group">
               <textarea class="field"></textarea>
-              <label class="message">Message</label>
+              <label class="message">Mensagem</label>
             </div>
-            <input type="submit" class="submit-btn" value="Submit">
+            <input type="submit" class="submit-btn" value="Enviar">
           </form>
+          <div class="extrainfo">
+            
+            <h3>Endereço: </h3><p>Av. Carlos Gomes, 222 - sala 811 - Boa Vista, Porto Alegre </p>
+          </div>
+          
         </div>
       </div>
     </section>
+    
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4550519551103!2d-51.18536318488535!3d-30.02380028188979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979d4ebd9dab5%3A0x8f6dd14611694f12!2sRegus%20-%20Porto%20Alegre%2C%20Carlos%20Gomes%20222!5e0!3m2!1spt-BR!2sbr!4v1616015837802!5m2!1spt-BR!2sbr" 
+    width="100%" height="250" style="border:0;" allowfullscreen="" 
+    loading="lazy">
+  </iframe>
 
     <footer class="footer">
       <div class="footer-content">
@@ -287,6 +282,7 @@
     <a href="#" class="scroll-btn">
       <i class="fas fa-arrow-up"></i>
     </a>
+    
     
   </div>
 
